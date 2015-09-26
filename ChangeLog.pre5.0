@@ -1,0 +1,603 @@
+2004-03-26 10:49  scott
+
+	* Makefile.am, README: Fixed error in installation of benchmark
+	  files Expanded README to cover dependencies and installation
+
+2004-03-26 10:14  scott
+
+	* config/: gcc34_pentium4.acovea, gcc34_prentium4.acovea: Renamed
+	  typoed file
+
+2004-03-26 10:01  scott
+
+	* configure.ac: Added check for libcoyotl and libevocosm headers
+	  Added check for expat header Fixed syntax bug in header checks
+
+2004-03-26 09:56  scott
+
+	* Makefile.am: Added installation and packaging of configuration
+	  and benchmark files
+
+2004-03-26 09:51  scott
+
+	* config/gcc34_opteron.acovea: Changed "switch" options to "simple"
+	  options Added comments
+
+2004-03-26 09:51  scott
+
+	* acovea/: acovea.cpp, acovea.h: Added tuning (were value) options
+	  to XML parsing Changed "switch" options to "simple" options
+
+2004-03-26 09:50  scott
+
+	* benchmarks/: almabench.c, fftbench.c, huffbench.c, linbench.c,
+	  lpbench.c, manbench.c, parabench.c, treebench.c: Updating
+	  benchmark tests for ACOVEA 4 Removed old lpbench Added new
+	  LUP-base lin bench Removed parabench; wanting to make something
+	  cleaner
+
+2004-03-26 08:18  scott
+
+	* config/gcc34_opteron.acovea: Removed -malign-double option
+
+2004-03-26 08:18  scott
+
+	* benchmarks/huffbench.c: Updated for new benchmark model
+
+2004-03-26 08:18  scott
+
+	* acovea/acovea.cpp: Bug fixes during first stage of testing
+
+2004-03-26 08:17  scott
+
+	* benchmarks/: fftbench.c, linbench.c: Updated and extended
+	  benchmarks
+
+2004-03-26 08:15  scott
+
+	* benchmarks/: mat1bench.c, parabench.c: New benchmark programs
+
+2004-03-25 20:44  scott
+
+	* config/: gcc34_opteron.acovea, gcc34_prentium4.acovea,
+	  gcc_ia32.acovea_config, gcc_x86_64.acovea_config: Renamed base
+	  configuration files
+
+2004-03-25 20:42  scott
+
+	* config/gcc_x86_64.acovea_config: Modified configuration format
+
+2004-03-25 20:41  scott
+
+	* acovea/: Makefile.am, acovea.cpp, acovea.h, runacovea.cpp:
+	  Removed explicit compiler/processor classes Compiler class now
+	  configured via XML file
+
+2004-03-25 20:40  scott
+
+	* configure.ac: Updated configuration for use of expat library
+
+2004-03-23 20:14  scott
+
+	* acovea/: acovea.cpp, acovea.h, runacovea.cpp: First pass on
+	  conversion to XML
+
+2004-03-23 19:16  scott
+
+	* AUTHORS, COPYING, ChangeLog, INSTALL, LICENSE.COMMERCIAL,
+	  LICENSE.GPL, LICENSE.POLICY, Makefile.am, NEWS, README,
+	  acovea.pc.in, configure.ac, reconf, acovea/Makefile.am,
+	  acovea/acovea.cpp, acovea/acovea.h, acovea/runacovea.cpp,
+	  benchmarks/almabench.c, benchmarks/fftbench.c,
+	  benchmarks/huffbench.c, benchmarks/lpbench.c,
+	  benchmarks/manbench.c, benchmarks/treebench.c,
+	  config/gcc_ia32.acovea_config, config/gcc_x86_64.acovea_config:
+	  Initial import
+
+2004-03-23 19:16  scott
+
+	* AUTHORS, COPYING, ChangeLog, INSTALL, LICENSE.COMMERCIAL,
+	  LICENSE.GPL, LICENSE.POLICY, Makefile.am, NEWS, README,
+	  acovea.pc.in, configure.ac, reconf, acovea/Makefile.am,
+	  acovea/acovea.cpp, acovea/acovea.h, acovea/runacovea.cpp,
+	  benchmarks/almabench.c, benchmarks/fftbench.c,
+	  benchmarks/huffbench.c, benchmarks/lpbench.c,
+	  benchmarks/manbench.c, benchmarks/treebench.c,
+	  config/gcc_ia32.acovea_config, config/gcc_x86_64.acovea_config:
+	  Initial revision
+
+2004-03-23 12:42  scott
+
+	* almabench.c, fftbench.cpp, lpbench.c: Updated benchmarks for
+	  faster run times
+
+2004-03-20 18:17  scott
+
+	* acovea.cpp, acovea.h, almabench.c, fftbench.cpp, gccacovea.cpp,
+	  huffbench.c, lpbench.c, manbench.c, manbench.cpp, treebench.c:
+	  Updated to support AMD64 architecture Set version to 3.4.0
+
+2003-12-08 14:30  scott
+
+	* almabench.c: Changed runtime for Acovea/ultrasparc
+
+2003-12-08 12:06  scott
+
+	* huffbench.c, treebench.c: Benchmarks not use VERIFY symbol to
+	  enable verification
+
+2003-12-08 11:57  scott
+
+	* gccacovea.cpp: Use -std=gnu99 for C and -std=gnu++98 for C++ in
+	  test compiles
+
+2003-12-08 11:33  scott
+
+	* almabench.c, fftbench.cpp, gccacovea.cpp, huffbench.c, lpbench.c,
+	  manbench.c, manbench.cpp, treebench.c: Added -std=gnu99 to all
+	  GCC compiles Benchmarks now use C99-style #elif Simplified
+	  symbols used in compile; acovea_NNN identifies architecture
+
+2003-12-07 12:03  scott
+
+	* almabench.c: Updated test sizes
+
+2003-12-06 20:20  scott
+
+	* Makefile: Replaced lost lptests target
+
+2003-12-06 18:03  scott
+
+	* lpbench.c: Updated run time for ultrasparc
+
+2003-12-05 22:17  scott
+
+	* huffbench.c: Changed sparc run time
+
+2003-12-05 22:02  scott
+
+	* huffbench.c: Added verification for non-ACOVEA runs
+
+2003-12-05 08:41  scott
+
+	* huffbench.c: Modified run times
+
+2003-12-05 08:36  scott
+
+	* gccacovea.cpp: Fixed bougus heading
+
+2003-12-04 00:10  scott
+
+	* fftbench.cpp: Fixed run time for pentium 4
+
+2003-12-03 18:29  scott
+
+	* gccacovea.cpp, manbench.c, treebench.c: Comment change for SPARC
+	  compiler Added generic "sizes" to some benchmarks
+
+2003-12-03 18:09  scott
+
+	* gccacovea.cpp, manbench.c, treebench.c: Added support for SPARC
+	  testing Updated some benchmark "sizes" for sparc
+
+2003-12-03 13:18  scott
+
+	* acovea.cpp, gccacovea.cpp: Minor fixes to display Added display
+	  of options reject by all population's best
+
+2003-12-02 16:40  scott
+
+	* Makefile, acovea.cpp, gccacovea.cpp: Changed output to show
+	  command lines instead of option lists Added "plain" option to
+	  test gcc 3.4 without Pentium options
+
+2003-11-28 10:20  scott
+
+	* manbench.c, manbench.cpp: Modifies run times
+
+2003-11-27 12:16  scott
+
+	* manbench.c, manbench.cpp: Updated for change in algorithm
+
+2003-11-26 16:39  scott
+
+	* manbench.c, manbench.cpp: Updated run times Fixed warning for
+	  string functions in manbench.c
+
+2003-11-26 15:31  scott
+
+	* Makefile, manbench.c, manbench.cpp: Modified run time for 3.1
+	  Added manbench builds to Makefile
+
+2003-11-26 15:02  scott
+
+	* almabench.c, manbench.c, manbench.cpp: Added manbench test
+	  Updated almabench runtimes
+
+2003-11-24 22:46  scott
+
+	* lpbench.c: UPdated run time for 3.1
+
+2003-11-24 15:29  scott
+
+	* treebench.c: Fixed run time for treebench on p3
+
+2003-11-23 13:14  scott
+
+	* treebench.c: Updated run-time of treebench
+
+2003-11-22 22:48  scott
+
+	* fftbench.cpp, lpbench.c: Updated run times
+
+2003-11-22 22:47  scott
+
+	* huffbench.c: Extended runtime of huffbench
+
+2003-11-22 22:43  scott
+
+	* acovea.cpp, gccacovea.cpp: Fixed various reporting bugs
+
+2003-11-22 09:31  scott
+
+	* acovea.cpp, acovea.h, fftbench.cpp, gccacovea.cpp: Created
+	  enum_option type Added enum_options to gcc and P4 compiler
+	  classes Updated acovea_reporter to support enum_options Replaced
+	  fpmath_option with an equivalent enum_option
+
+2003-11-20 07:54  scott
+
+	* gccacovea.cpp: Moved -fomit-frame-pointer into standard pentium
+	  options
+
+2003-11-20 07:33  scott
+
+	* Makefile, fftbench.cpp, gccacovea.cpp: Extended fftbench run time
+	  on P4 Added -fomit-frame-pointer to pentium4 options
+
+2003-11-17 09:36  scott
+
+	* Makefile: Remove extraneous comments from Makefile
+
+2003-11-17 09:35  scott
+
+	* Makefile: Updated Makefile for new test results
+
+2003-11-16 16:55  scott
+
+	* Makefile, lpbench.c: Changed "baseline" targets to "test" in
+	  Makefile Merged ga tests with default test generation Changed
+	  length of lpbench benchmark run
+
+2003-11-16 11:36  scott
+
+	* almabench.c, fftbench.cpp, huffbench.c, lpbench.c, treebench.c:
+	  Reduced run-times for benchmarks
+
+2003-11-15 13:16  scott
+
+	* gccacovea.cpp, runtestsP3.sh, runtestsP4.sh: Added batch files to
+	  run default test batch
+
+2003-11-15 12:48  scott
+
+	* Makefile: Added comments to Makefile Added gaP4 and gaP3 targets
+	  to makefile Moved acovea-based builds from baseline to ga4 and
+	  ga3
+
+2003-11-14 12:13  scott
+
+	* Makefile: Changed names of baseline programs in Makefile
+
+2003-11-14 12:09  scott
+
+	* Makefile, acovea.cpp, acovea.h, gccacovea.cpp: Move gcc and
+	  pentium-specific options from acovea into gccacovea Added ga
+	  compiles to Makefile Updated to version 3.0.0
+
+2003-11-12 20:52  scott
+
+	* Makefile, gavg.cpp: Modified gavg to handle multiple files
+
+2003-11-05 21:59  scott
+
+	* Makefile: Added creation of INtel baselines
+
+2003-11-04 23:34  scott
+
+	* acovea.cpp: Fixed bugs in new -O3 mode Removed some obsolete
+	  comments Fixed a few inaccurate comments
+
+2003-11-04 20:50  scott
+
+	* Makefile, acovea.cpp, acovea.h, gccacovea.cpp: Added ability to
+	  test with -O3 (instead of -O1) as a base
+
+2003-11-02 08:15  scott
+
+	* acovea.cpp: Fixed skewed avaerage with bogus runtime from
+	  failures
+
+2003-11-01 17:09  scott
+
+	* acovea.cpp: updated version number
+
+2003-11-01 17:08  scott
+
+	* acovea.cpp, acovea.h: Broken compiles and runs now assign a
+	  "bogus" (bad) fitness to organism Program no longer terminates
+	  for broken runs and compiles
+
+2003-11-01 13:19  scott
+
+	* acovea.cpp: Fixed bug in presets for gcc 3.4 (list of bools too
+	  small)
+
+2003-11-01 13:10  scott
+
+	* acovea.cpp: Remove branch target load optimizations (getting
+	  warnings and errors)
+
+2003-11-01 09:24  scott
+
+	* Makefile, acovea.cpp: Split baselines into separate targets in
+	  Makefile Added new 3.4 options to intel compiler and gcc Enabled
+	  -fnew-ra option
+
+2003-10-30 10:48  scott
+
+	* Makefile: Changed ga compile for fftbench
+
+2003-10-29 22:32  scott
+
+	* benchtime.sh: Added script for generating list of runtimes for
+	  all baselines
+
+2003-10-29 19:18  scott
+
+	* Makefile: Split baselines into benchmark-specific groups Added
+	  baseline compiles of known ga optimization sets
+
+2003-10-28 21:36  scott
+
+	* Makefile, acovea.cpp, acovea.h, gccacovea.cpp: Remove Intel
+	  compiles from makefile (non sequitor) Added mathlib option to
+	  acovea and driver program Increased range and granularity of
+	  -finline-limit evolution
+
+2003-10-27 19:43  scott
+
+	* Makefile, fftbench.cpp, gavg.cpp, lpbench.c: Added name of
+	  program being timed to gavg header Fixed extraneous "const" on
+	  function in lpbench Can't remember what I did to fftbench Added
+	  generation of Intel baselines to Makefile
+
+2003-10-27 12:46  scott
+
+	* Makefile, acovea.cpp, treebench.c: Set useful values for P# test
+	  size in treebench Add -std=gnu99 to compile command lines in ga
+	  Minor makefile bugs
+
+2003-10-27 12:11  scott
+
+	* Makefile, bench_boilerplate.c, treebench.c: Added new b-tree
+	  benchmark Updated makefile Began boilerplate for benchmarks
+
+2003-10-21 16:47  scott
+
+	* Makefile, acovea.cpp, gavg.cpp: Added gavg program to compute
+	  mean and average for several runs of same program Fixed trivial
+	  memory leak in acovea.cpp Added gavg to Makefile Added "all"
+	  target to Makefile
+
+2003-10-21 14:02  scott
+
+	* acovea.cpp: Fixed divide by zero bug
+
+2003-10-21 14:00  scott
+
+	* acovea.cpp: More fixes to value averaging
+
+2003-10-21 13:52  scott
+
+	* acovea.cpp, acovea.h, gccacovea.cpp: Fixed another bug in valued
+	  option average Fixed minor problems in displayed headers
+
+2003-10-21 12:25  scott
+
+	* acovea.cpp, lpbench.c: Changed length of lpbench run on P4
+	  COmment change in acovea.cpp
+
+2003-10-21 11:47  scott
+
+	* Makefile.icc: Removed intel makefile
+
+2003-10-21 11:46  scott
+
+	* LICENSE.SVFL, Makefile, README, acovea.cpp, acovea.h, fftbench.c,
+	  gccacovea.cpp, manbench.c, runacovea.cpp, test_acovea.cpp:
+	  Removed extraneous files and tests Added license file Added
+	  README Cleaned up Makefile, removed obsolete targets Renamed
+	  runacovea to gccacovea Fixed bug in values option stats Added
+	  help information to gccacovea gccacovea no longer runs without a
+	  specific target app Removed extra switches from gccacovea
+
+2003-10-20 14:28  scott
+
+	* acovea.cpp, acovea.h: Use temporary file names for generated
+	  executables Cleaned up confusing function naming in compiler
+	  classes
+
+2003-10-19 19:51  scott
+
+	* acovea.cpp: Trivial spelling error in title text
+
+2003-10-19 19:47  scott
+
+	* acovea.cpp: Flushed I/O buffer after value options displayed
+
+2003-10-19 16:23  scott
+
+	* acovea.cpp, acovea.h: Added settings trackers and output for
+	  valued options (and -mfpmath) Added get_name function to options
+	  that returns name w/o arguments
+
+2003-10-19 11:39  scott
+
+	* acovea.cpp, acovea.h, runacovea.cpp: Added ability to choose
+	  scaling method (prev. was windowed only) Set default to
+	  "windowed" (to match 2.2.0)
+
+2003-10-18 23:47  scott
+
+	* acovea.cpp, fftbench.cpp: Fixed bug where pentium was duplicating
+	  presets from gcc34
+
+2003-10-18 21:32  scott
+
+	* acovea.cpp: Fixed display bug with "** NONE **"
+
+2003-10-18 21:17  scott
+
+	* acovea.cpp, acovea.h, lpbench.c: Added preset options (-O1, -)2,
+	  -O3, -)s) to base gcc34 compiler class Lengthen lpbench test
+
+2003-10-18 17:01  scott
+
+	* acovea.cpp, acovea.h: Added -Darch_?? flag to gcc34_compiler
+	  Fixed redundant architecture bug in gcc34_compiler and
+	  gcc34_pentium_compiler
+
+2003-10-17 19:52  scott
+
+	* acovea.cpp, acovea.h: Simplified output for single-population
+	  runs Added prelim code for handling valued options; disabled for
+	  now
+
+2003-10-17 16:09  scott
+
+	* Makefile: Added deletion of baseline excutables to "clean" target
+
+2003-10-16 22:51  scott
+
+	* acovea.cpp, fftbench.c, runacovea.cpp: Added SEGV signal handler
+	  to acovea.cpp
+
+2003-10-16 19:03  scott
+
+	* acovea.cpp, fftbench.cpp: Change fftbench option from "terse" to
+	  "ga"
+
+2003-10-16 14:35  scott
+
+	* fftbench.cpp: Updated test sizes for pentiu3 (non-pentium 4)
+
+2003-10-16 14:26  scott
+
+	* almabench.c, fftbench.cpp, huffbench.c, lpbench.c: Updated test
+	  sizes for Pentium 4
+
+2003-10-16 11:15  scott
+
+	* Makefile: Added SYMBOLS to Makefile
+
+2003-10-16 11:12  scott
+
+	* Makefile: Added more baselines MARCH now sets a preproc symbol
+	  arch_$(MARCH) for compilers
+
+2003-10-16 11:03  scott
+
+	* Makefile, acovea.cpp: Added MARCH symbol to Makefile, defaults to
+	  "pentium4" Added "baselines" target to Makefile
+
+2003-10-16 10:55  scott
+
+	* acovea.cpp, fftbench.cpp, test_acovea.cpp: Removed -fnew-ra from
+	  tests for gcc3.4 due to bug 12619
+
+2003-10-15 22:47  scott
+
+	* acovea.cpp, lpbench.c, runacovea.cpp: Fixed bug in -p3 option of
+	  runacovea Added trap for errors running generated programs
+
+2003-10-15 13:57  scott
+
+	* acovea.cpp, acovea.h, lpbench.c: Added fpmath option type (three
+	  values)
+
+2003-10-15 12:33  scott
+
+	* acovea.cpp, acovea.h, runacovea.cpp: Code clean-up
+
+2003-10-15 12:07  scott
+
+	* acovea.cpp, almabench.c, fftbench.c, huffbench.c, lpbench.c,
+	  manbench.c: Change GCCGA flag to AVCOVEA
+
+2003-10-15 11:21  scott
+
+	* acovea.cpp, lpbench.c: Fixed missing output in chromosome display
+	  Added different test sizes for P3 and P4 in lpbench
+
+2003-10-15 00:09  scott
+
+	* fftbench.c, fftbench.cpp: Added fft benchmarks
+
+2003-10-15 00:03  scott
+
+	* almabench.c, huffbench.c, lpbench.c: Modified test lengths to
+	  around 24 seconds for each benchmark
+
+2003-10-14 23:27  scott
+
+	* acovea.cpp: Fixed trivial bug in compiler name function
+
+2003-10-14 23:07  scott
+
+	* acovea.cpp, acovea.h, runacovea.cpp, test_acovea.cpp: Code
+	  complete
+
+2003-10-14 12:55  scott
+
+	* Makefile, runacovea.cpp: Implemented runacovea driver program
+
+2003-10-14 12:48  scott
+
+	* acovea.cpp, acovea.h, test_acovea.cpp: First full compile of
+	  complete acovea system
+
+2003-10-13 23:34  scott
+
+	* acovea.cpp, acovea.h: Added landscape class
+
+2003-10-13 20:53  scott
+
+	* acovea.cpp, acovea.h, test_acovea.cpp: Added reproducer Fixed bug
+	  in testing mutator
+
+2003-10-13 20:35  scott
+
+	* acovea.cpp: Minor changes to mutator
+
+2003-10-13 20:34  scott
+
+	* Makefile.icc, acovea.cpp, acovea.h, test_acovea.cpp: Core
+	  compiler and option classes working Initial implementation of
+	  organism and mutator
+
+2003-10-13 13:28  scott
+
+	* acovea.cpp, acovea.h, test_acovea.cpp: First clean compile of
+	  option, chromosome, and compiler classes
+
+2003-10-12 22:38  scott
+
+	* Makefile, acovea.cpp, acovea.h, almabench.c, huffbench.c,
+	  lpbench.c, manbench.c, test_acovea.cpp: Initial import
+
+2003-10-12 22:38  scott
+
+	* Makefile, acovea.cpp, acovea.h, almabench.c, huffbench.c,
+	  lpbench.c, manbench.c, test_acovea.cpp: Initial revision
+

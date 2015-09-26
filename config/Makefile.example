@@ -1,0 +1,5 @@
+# this line eliminates any extra spaces in OUTPUT
+BUILD_THIS = $(OUTPUT)
+
+$(BUILD_THIS) : huffbench.c
+	gcc -lrt -lm -O1 -std=gnu99 $(SETTINGS) -o $(BUILD_THIS) huffbench.c

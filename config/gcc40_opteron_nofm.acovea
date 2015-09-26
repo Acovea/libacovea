@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<acovea_config>
+    <acovea version="5.1" />
+    <description value="gcc 4.x Opteron (AMD64/x86_64), no -ffast-math" version="1.2.0" />
+    <get_version value="gcc -dumpversion" />
+    <quoted_options value="false" />
+
+    <prime command="gcc"
+           flags="-lrt -lm -std=gnu99 -O1 -march=opteron ACOVEA_OPTIONS -o ACOVEA_OUTPUT ACOVEA_INPUT" />
+
+    <baseline description="-O1"
+              command="gcc"
+              flags="-lrt -lm -std=gnu99 -O1 -march=opteron -o ACOVEA_OUTPUT ACOVEA_INPUT" />
+
+    <baseline description="-O2"
+              command="gcc"
+              flags="-lrt -lm -std=gnu99 -O2 -march=opteron -o ACOVEA_OUTPUT ACOVEA_INPUT" />
+
+    <baseline description="-O3"
+              command="gcc"
+              flags="-lrt -lm -std=gnu99 -O3 -march=opteron -o ACOVEA_OUTPUT ACOVEA_INPUT" />
+
+    <baseline description="-O3 -ffast-math"
+              command="gcc"
+              flags="-lrt -lm -std=gnu99 -O3 -march=opteron -ffast-math -o ACOVEA_OUTPUT ACOVEA_INPUT" />
+
+    <baseline description="-Os"
+              command="gcc"
+              flags="-lrt -lm -std=gnu99 -Os -march=opteron -o ACOVEA_OUTPUT ACOVEA_INPUT" />
+
+    <!-- A list of flags that will be "evolved" by ACOVEA (85 for gcc 4.x!) -->
+    <flags>
+
+        <!-- O1 options (these turn off options implied by -O1) -->
+        <flag type="simple" value="-fno-merge-constants" />
+        <flag type="simple" value="-fno-defer-pop" />
+        <flag type="simple" value="-fno-thread-jumps" />
+        <flag type="enum"   value="-fno-omit-frame-pointer|-momit-leaf-frame-pointer" />
+        <flag type="simple" value="-fno-guess-branch-probability" />
+        <flag type="simple" value="-fno-cprop-registers" />
+        <flag type="simple" value="-fno-if-conversion" />
+        <flag type="simple" value="-fno-if-conversion2" />
+        <flag type="simple" value="-fno-delayed-branch" />
+        <flag type="enum"   value="-fno-loop-optimize|-floop-optimize2" />
+        <flag type="simple" value="-ftree-ccp" />
+        <flag type="simple" value="-ftree-dce" />
+        <flag type="simple" value="-ftree-dominator-opts" />
+        <flag type="simple" value="-ftree-dse" />
+        <flag type="simple" value="-ftree-ter" />
+        <flag type="simple" value="-ftree-lrs" />
+        <flag type="simple" value="-ftree-sra" />
+        <flag type="simple" value="-ftree-copyrename" />
+        <flag type="simple" value="-ftree-fre" />
+        <flag type="simple" value="-ftree-ch" />
+        <flag type="simple" value="-fmerge-constants" />
+
+        <!-- O2 options -->
+        <flag type="simple" value="-fcrossjumping" />
+        <flag type="simple" value="-foptimize-sibling-calls" />
+        <flag type="simple" value="-fcse-follow-jumps" />
+        <flag type="simple" value="-fcse-skip-blocks" />
+        <flag type="simple" value="-fgcse" />
+        <flag type="simple" value="-fexpensive-optimizations" />
+        <flag type="simple" value="-fstrength-reduce" />
+        <flag type="simple" value="-frerun-cse-after-loop" />
+        <flag type="simple" value="-frerun-loop-opt" />
+        <flag type="simple" value="-fcaller-saves" />
+        <flag type="enum"   value="-fforce-mem|-fforce-addr" />
+        <flag type="simple" value="-fpeephole2" />
+        <flag type="simple" value="-fschedule-insns" />
+        <flag type="simple" value="-fschedule-insns2" />
+        <flag type="simple" value="-fregmove" />
+        <flag type="simple" value="-fstrict-aliasing" />
+        <flag type="simple" value="-fdelete-null-pointer-checks" />
+        <flag type="simple" value="-freorder-blocks" />
+        <flag type="simple" value="-fthread-jumps" />
+        <flag type="simple" value="-fgcse-lm" />
+        <flag type="simple" value="-fsched-interblock" />
+        <flag type="simple" value="-fsched-spec" />
+        <flag type="simple" value="-freorder-blocks" />
+        <flag type="simple" value="-freorder-functions" />
+        <flag type="simple" value="-funit-at-a-time" />
+        <flag type="simple" value="-falign-functions" />
+        <flag type="simple" value="-falign-jumps" />
+        <flag type="simple" value="-falign-loops" />
+        <flag type="simple" value="-falign-labels" />
+        <flag type="simple" value="-ftree-pre" />
+
+        <!-- O3 options -->
+        <flag type="simple" value="-finline-functions" />
+        <flag type="simple" value="-funswitch-loops" />
+        <flag type="simple" value="-fgcse-after-reload" />
+           
+        <!-- Additional options -->
+        <flag type="simple" value="-ffloat-store" />
+        <flag type="simple" value="-fprefetch-loop-arrays" />
+        <flag type="simple" value="-fno-inline" />
+        <flag type="simple" value="-fpeel-loops" />
+        <flag type="simple" value="-ftracer" />
+        <flag type="simple" value="-funswitch-loops" />
+        <flag type="enum"   value="-funroll-loops|-funroll-all-loops" />
+        <flag type="enum"   value="-fbranch-target-load-optimize|-fbranch-target-load-optimize2" />
+        <flag type="simple" value="-fmodulo-sched" />
+        <flag type="simple" value="-fno-function-cse" />
+        <flag type="simple" value="-fgcse-sm" />
+        <flag type="simple" value="-fgcse-las" />
+        <flag type="simple" value="-freschedule-modulo-scheduled-loops" />
+        <flag type="simple" value="-ftree-loop-im" />
+        <flag type="simple" value="-ftree-loop-ivcanon" />
+        <flag type="simple" value="-fivopts" />
+        <flag type="simple" value="-ftree-vectorize" />
+        <flag type="simple" value="-fvariable-expansion-in-unroller" />
+
+        <!-- Options specific to Intel-style architecture -->
+        <flag type="simple" value="-mieee-fp" />
+        <flag type="simple" value="-mno-push-args" />
+        <flag type="simple" value="-maccumulate-outgoing-args" />
+        <flag type="simple" value="-mno-align-stringops" />
+        <flag type="simple" value="-minline-all-stringops" />
+        <flag type="enum"   value="-mfpmath=387|-mfpmath=sse|-mfpmath=sse,387" />
+        <flag type="simple" value="-D__NO_MATH_INLINES" />
+
+        <!-- Tuning options that have a numeric value -->
+        <flag type="tuning" value="-finline-limit" default="600" min="100" max="10000" step="200" separator="=" />
+
+    </flags>
+
+</acovea_config>

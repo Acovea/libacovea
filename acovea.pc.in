@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: @GENERIC_PROGRAM_NAME@
+Description: A framew3ork for evolutionary algorithms
+Author: Scott Robert Ladd
+URL: http://www.coyotegulch.com/libevocosm
+Version: @VERSION@
+Libs: -L${libdir} -l@GENERIC_PROGRAM_NAME
+Cflags: -I${includedir}/@GENERIC_PROGRAM_NAME@ -I${libdir}/@GENERIC_PROGRAM_NAME@/include
+

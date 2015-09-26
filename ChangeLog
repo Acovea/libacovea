@@ -1,0 +1,224 @@
+2005-11-11
+        * Acovea 5.1.1 released
+        
+        * Minor changes to reflect updates to Evocosm and Coyotl libraries
+        
+        * Minor license change
+
+2005-04-29 08:30  scott
+
+	* config/: g++40_opteron.acovea, g++40_pentium4.acovea: Even more
+	  configs
+
+2005-04-29 07:23  scott
+
+	* config/gcc40_pentium4.acovea~: I hate spurious files
+
+2005-04-29 07:22  scott
+
+	* config/: gcc40_pentium4.acovea, gcc40_pentium4.acovea~: This file
+	  keeps getting lost!
+
+2005-04-28 16:16  scott
+
+	* config/: g9540_pentium3.acovea, gcc34_opteron_size.acovea: More
+	  config files
+
+2005-04-28 16:14  scott
+
+	* config/gcc34_opteron_makefile.acovea: Added makefile
+	  configuration example
+
+2005-04-28 16:13  scott
+
+	* config/: g++34_opteron.acovea, g++34_pentium3.acovea,
+	  g++34_pentium4.acovea, g9540_opteron.acovea,
+	  g9540_pentium4.acovea, gcc34_opteron.acovea,
+	  gcc34_pentium3.acovea, gcc34_pentium4.acovea,
+	  gcc40_opteron.acovea: Minor tweaks and clean-ups
+
+2005-04-28 15:57  scott
+
+	* config/: g9540_opteron.acovea, g9540_pentium4.acovea: Additional
+	  gfortran configs
+
+2005-04-28 15:54  scott
+
+	* config/: g9540_opteron.acovea, gcc40_opteron.acovea: Added
+	  gfortran config
+
+2005-04-28 15:51  scott
+
+	* config/: g++34_opteron.acovea, g++34_pentium3.acovea,
+	  g++34_pentium4.acovea, gcc34_opteron.acovea,
+	  gcc34_pentium3.acovea, gcc34_pentium4.acovea,
+	  gcc40_opteron.acovea: Fixed problem with "omit frame pointer"
+	  options
+
+2005-04-28 13:50  scott
+
+	* config/gcc40_opteron.acovea: Added config for GCC 4.0
+
+2005-04-27 07:13  scott
+
+	* libacovea/: acovea.cpp, acovea.h: Undid change of tuning from int
+	  to double; back to int!
+
+2005-04-26 15:07  scott
+
+	* config/: g++34_pentium3.acovea, gcc34_pentium3.acovea: New files
+	  for pentium3
+
+2005-04-26 15:03  scott
+
+	* config/: g++34_opteron.acovea, g++34_pentium4.acovea,
+	  gcc34_pentium4.acovea: Updated configs for new format
+
+2005-04-26 14:56  scott
+
+	* libacovea/: acovea.cpp, acovea.h: Changed value options to use
+	  doubles instead of ints
+
+2005-04-26 14:10  scott
+
+	* cmdline/runacovea.cpp, config/gcc34_opteron.acovea,
+	  libacovea/acovea.cpp: Output refinements Automatic graphing of
+	  results
+
+2005-04-26 12:41  scott
+
+	* cmdline/runacovea.cpp, config/Makefile.example,
+	  config/g++33_athlon-xp.acovea, config/g++33_opteron.acovea,
+	  config/g++33_pentium3.acovea, config/g++33_pentium4.acovea,
+	  config/g++34_opteron.acovea, config/g++34_pentium4.acovea,
+	  config/g++40_power4.acovea, config/gcc33_athlon-xp.acovea,
+	  config/gcc33_opteron.acovea, config/gcc33_pentium3.acovea,
+	  config/gcc33_pentium4.acovea, config/gcc34_opteron.acovea,
+	  config/gcc34_pentium4.acovea, config/gcc40_opteron.acovea,
+	  config/gcc40_pentium4.acovea, config/gcc40_power4.acovea,
+	  libacovea/acovea.cpp, libacovea/acovea.h: Changes to support
+	  makefiles
+
+2005-04-25 14:23  scott
+
+	* cmdline/runacovea.cpp, libacovea/acovea.cpp, libacovea/acovea.h:
+	  Minor output change
+
+2005-04-25 06:53  scott
+
+	* libacovea/: acovea.cpp, acovea.h: Cleaned up and simplified
+	  output
+
+2005-04-24 23:22  scott
+
+	* libacovea/: acovea.cpp, acovea.h: Added constant for "mism"
+	  threshold
+
+2005-04-24 18:08  scott
+
+	* cmdline/runacovea.cpp, libacovea/acovea.cpp, libacovea/acovea.h:
+	  Ready for release
+
+2005-04-23 09:42  scott
+
+	* libacovea/: acovea.cpp, acovea.h: Added optimizations for size
+	  and return value
+
+2005-04-23 09:42  scott
+
+	* config/: g++33_athlon-xp.acovea, g++33_opteron.acovea,
+	  g++33_pentium3.acovea, g++33_pentium4.acovea,
+	  g++34_opteron.acovea, g++34_pentium4.acovea,
+	  gcc33_athlon-xp.acovea, gcc33_opteron.acovea,
+	  gcc33_pentium3.acovea, gcc33_pentium4.acovea,
+	  gcc34_opteron.acovea, gcc34_pentium4.acovea: Updated for new XML
+	  format
+
+2005-04-23 09:41  scott
+
+	* cmdline/runacovea.cpp: Added size and return value optimizations
+
+2005-04-22 23:36  scott
+
+	* libacovea/: acovea.cpp, acovea.h: Minor update for listener
+
+2005-04-22 23:36  scott
+
+	* config/: g++34_opteron.acovea, gcc34_opteron.acovea: Modofied for
+	  minor change in XML format
+
+2005-04-22 23:36  scott
+
+	* cmdline/runacovea.cpp: Update for listener
+
+2005-04-21 16:32  scott
+
+	* libacovea/: acovea.cpp, acovea.h: Modified to pass output stream
+	  to acovea_world object Reporter now outputs everything to a
+	  supplied stream
+
+2005-04-21 16:31  scott
+
+	* cmdline/runacovea.cpp: Modified to pass output stream to
+	  acovea_world object
+
+2005-04-20 10:22  scott
+
+	* Makefile.am, configure.ac, cmdline/Makefile.am,
+	  cmdline/runacovea.cpp, libacovea/Makefile.am: Reconfigured for
+	  separate library and drivers
+
+2005-04-20 09:52  scott
+
+	* libacovea/: Makefile.am, acovea.cpp, acovea.h: Main Acovea logic
+	  now in separate library
+
+2005-04-20 09:52  scott
+
+	* cmdline/: Makefile.am, runacovea.cpp: Command-line driver now in
+	  its own directory
+
+2005-04-20 09:38  scott
+
+	* config/gcc40_opteron.acovea: Updated comments
+
+2005-04-20 09:37  scott
+
+	* reconf: Added reconfigure script
+
+2005-04-20 08:40  scott
+
+	* AUTHORS, COPYING, ChangeLog, ChangeLog.pre4.0, INSTALL,
+	  LICENSE.COMMERCIAL, LICENSE.GPL, LICENSE.POLICY, Makefile.am,
+	  NEWS, README, acovea.pc.in, configure.ac, benchmarks/almabench.c,
+	  benchmarks/evobench.c, benchmarks/fftbench.c,
+	  benchmarks/huffbench.c, benchmarks/linbench.c,
+	  benchmarks/mat1bench.c, benchmarks/treebench.c,
+	  config/g++33_athlon-xp.acovea, config/g++33_opteron.acovea,
+	  config/g++33_pentium3.acovea, config/g++33_pentium4.acovea,
+	  config/g++34_opteron.acovea, config/g++34_pentium4.acovea,
+	  config/g++40_power4.acovea, config/gcc33_athlon-xp.acovea,
+	  config/gcc33_opteron.acovea, config/gcc33_pentium3.acovea,
+	  config/gcc33_pentium4.acovea, config/gcc34_opteron.acovea,
+	  config/gcc34_pentium4.acovea, config/gcc40_opteron.acovea,
+	  config/gcc40_pentium4.acovea, config/gcc40_power4.acovea:
+	  Clean-up import
+
+2005-04-20 08:40  scott
+
+	* AUTHORS, COPYING, ChangeLog, ChangeLog.pre4.0, INSTALL,
+	  LICENSE.COMMERCIAL, LICENSE.GPL, LICENSE.POLICY, Makefile.am,
+	  NEWS, README, acovea.pc.in, configure.ac, benchmarks/almabench.c,
+	  benchmarks/evobench.c, benchmarks/fftbench.c,
+	  benchmarks/huffbench.c, benchmarks/linbench.c,
+	  benchmarks/mat1bench.c, benchmarks/treebench.c,
+	  config/g++33_athlon-xp.acovea, config/g++33_opteron.acovea,
+	  config/g++33_pentium3.acovea, config/g++33_pentium4.acovea,
+	  config/g++34_opteron.acovea, config/g++34_pentium4.acovea,
+	  config/g++40_power4.acovea, config/gcc33_athlon-xp.acovea,
+	  config/gcc33_opteron.acovea, config/gcc33_pentium3.acovea,
+	  config/gcc33_pentium4.acovea, config/gcc34_opteron.acovea,
+	  config/gcc34_pentium4.acovea, config/gcc40_opteron.acovea,
+	  config/gcc40_pentium4.acovea, config/gcc40_power4.acovea: Initial
+	  revision
+

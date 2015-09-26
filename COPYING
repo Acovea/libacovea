@@ -1,0 +1,92 @@
+Evocosm Licensing Policy
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Evocosm 2.5 is 100% GPL, and if your use of it is 100% GPL compliant,
+then you never have to pay me for a license. In all other instances,
+you are better served by purchasing a commercial license.
+
+"GPL" refers to the GNU General Public License. You can find the
+definitive version of the GPL in the file "LICENSE.GPL". The Evocosm
+distribution includes the text of the GPL in the LICENSE.GPL file.
+
+Evocosm is also available under commercial non-GPL license. The
+LICENSE.COMMERCIAL file contains a default license; I am always open
+to discussing terms that fit an individual customer's needs.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+License Choices
+
+If your application is licensed under the GPL, you are free and
+welcome to ship GPL-licensed Evocosm software with your application.
+By "application" I mean any type of software application, system,
+tool or utility. For doing this, you do not need a separate signed
+agreement with me, because the GPL text is sufficient.
+
+As long as you never distribute Evocosm software (or software that
+forms a derivative work with Evocosm software) in any way, you are
+free to use it for powering your application, irrespective of the
+license the application is under.
+
+You are allowed to modify GPL-licensed Evocosm software any way you
+like. If you choose to distribute any software that forms a
+derivative work with GPL licensed Evocosm software then the entire
+derivative work must be placed under the terms and conditions of the
+GPL.
+
+You are allowed to copy Evocosm binaries and source code, but when
+you do so, the copies will fall under the GPL license.
+
+A derivative work is a work that is based in whole or in part on
+another work. Your national copyright law may provide additional
+information on when a derivative work is formed. If you are unsure
+of whether or not your combination of GPL licensed Evocosm software
+with other software forms a derivative work, then I recommend
+placing the derivative work under the GPL or purchasing a commercial
+license.
+
+If your application is not licensed under the GPL and you intend to
+distribute Evocosm software (be that internally or externally), you must
+first obtain a commercial license to the Evocosm software.
+
+So, if you include Evocosm in your non-GPL licensed application you need
+a commercial license for Evocosm.
+
+If you desire a warranty, support or consulting on the use of Evocosm,
+you need a commercial license. Many users opt for the commercial license
+simply because under it, I take formal responsibility for the product.
+Under the GPL license, there are no warranties or representations for
+the software.
+
+If you represent a non-profit organization or an academic institution,
+I recommend you to put your own application under GPL. Thereby you are
+free to use Evocosm software free of charge under the GPL license.
+
+If you are a private individual you are free to use Evocosm software
+for your personal applications, as long as you do not distribute them.
+
+Please note that even if you ship a free demo version of your own
+application, the above rules apply.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+Recommendations
+
+To all commercial organizations I recommend the commercial license. Not
+only does this release you from the requirements of the GPL license, it
+also gives you a license letter from Evocosm where I assume responsibility
+for my product. The GPL license is an "as is" license with no warranties
+whatsoever.
+
+To all GPL/Open Source enthusiasts I recommend licensing Evocosm under
+the GPL license.
+
+To anyone in doubt, I recommend the commercial license. It is never
+wrong. I am able to sell commercial licenses at prices well under the
+industry average, and this is without compromising my own profitability.
+
+If you have any questions on Evocosm licensing, feel free to contact me
+at scott.ladd@coyotegulch.com.
+
+..Scott
