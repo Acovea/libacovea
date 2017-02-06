@@ -419,7 +419,7 @@ namespace acovea
         string m_description;
         string m_command;
         string m_flags;
-    };
+    } command_elements;
 
     class application : public common
     {
@@ -627,13 +627,13 @@ namespace acovea
         string  m_detail;
         double  m_fitness;
         bool    m_acovea_generated;
-    };
+    } test_result;
     
     typedef struct option_zscore
     {
         string  m_name;
         double  m_zscore;
-    };
+    } option_zscore;
     
     class acovea_listener : public libevocosm::listener
     {
