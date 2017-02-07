@@ -44,6 +44,7 @@ using namespace libcoyotl;
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
 
 #include <vector>
 #include <cstring>
@@ -1691,7 +1692,7 @@ void acovea_listener_stdout::report_generation(size_t a_gen_no, double  a_avg_fi
 
 void acovea_listener_stdout::report_final(vector<test_result> & a_results, vector<option_zscore> & a_zscores)
 {
-    static const double THRESHOLD = 1.5;
+    static const double rTHRESHOLD = 1.5;
     
     // format time
     char time_text[256];
@@ -1706,7 +1707,7 @@ void acovea_listener_stdout::report_final(vector<test_result> & a_results, vecto
     cout << "\nOptimistic options:\n\n";
     for (int n = 0; n < a_zscores.size(); ++n)
     {
-        if (a_zscores[n].m_zscore >= THRESHOLD)
+        if (a_zscores[n].m_zscore >= rTHRESHOLD)
         {
             flag = true;
             
@@ -1723,7 +1724,7 @@ void acovea_listener_stdout::report_final(vector<test_result> & a_results, vecto
     cout << "\nPessimistic options:\n\n";
     for (int n = 0; n < a_zscores.size(); ++n)
     {
-        if (a_zscores[n].m_zscore <= -THRESHOLD)
+        if (a_zscores[n].m_zscore <= -rTHRESHOLD)
         {
             flag = true;
             
