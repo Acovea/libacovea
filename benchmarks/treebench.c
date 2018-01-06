@@ -201,8 +201,8 @@ static void recursive_destroy_page(btree_page * page)
         if (page->m_links[n] != NULL)
             recursive_destroy_page(page->m_links[n]);
         
-        free(page);
     }
+    free(page);
 }
 
 static void free_btree(btree * btree)
