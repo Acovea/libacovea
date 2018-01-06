@@ -1,4 +1,4 @@
-ACOVEA
+#ACOVEA
 Analysis of Compiler Options via Evolutionary Algorithm 
 
 version 4.0
@@ -10,7 +10,7 @@ Copyright 2003, 2004 Scott Robert Ladd. All rights reserved.
 Contact information:    coyote@coyotegulch.com
                         http://www.coyotegulch.com
                         
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 
 ACOVEA (Analysis of Compiler Options via Evolutionary Algorithm)
 implements a genetic algorithm to find the "best" options for
@@ -118,21 +118,11 @@ However, due to popular demand, a future version of Acovea will
 support the use of Makefiles and an optional timing mechanism for
 large applications.
 
-The homepage for Acovea can be found at:
-
-	http://www.coyotegulch.com/acovea
+The homepage for Acovea can be found at: http://www.coyotegulch.com/acovea
     
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 Other useful URLs:
-    Home Page
-        http://www.coyotegulch.com
-        
-    GNU Compiler Collection
-        http://gcc.gnu.org
-        
-    Intel C++ Compiler
-        http://www.intel.com/software/products/compilers
-        
-    Doxygen Documentation Tool
-        http://www.doxygen.org
+- [Home Page](http://www.coyotegulch.com)
+- [GNU Compiler Collection](http://gcc.gnu.org)
+- [Intel C++ Compiler](http://www.intel.com/software/products/compilers)
+- [Doxygen Documentation Tool](http://www.doxygen.org)
