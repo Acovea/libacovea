@@ -38,10 +38,7 @@ Configuration and building proceeds along the usual lines:
     ./make
     ./make install
 
-To build Acovea, you will also need the Coyotl and Evocosm libraries:
-
-	http://www.coyotegulch.com/libcoyotl
-    http://www.coyotegulch.com/libevocosm
+To build Acovea, you will also need the [Coyotl](https://github.com/Acovea/libcoyotl) and [Evocosm](https://github.com/Acovea/libevocosm) libraries.
     
 The installation creates a program, runacovea, installed by default
 to /usr/local/bin. Running this program without arguments will display
@@ -49,9 +46,7 @@ a command summary.
 
 For parsing the compiler configuration files, which are XML, Acovea
 uses the expat library. Your distribution likely installed expat;
-if not, its home page is:
-
-	http://expat.sourceforge.net/
+if not, check its [home page](http://expat.sourceforge.net/).
 
 The installation directories can be changed using the --prefix option
 when invoking configure.
