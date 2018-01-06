@@ -1,48 +1,64 @@
-SUBDIRS = libacovea cmdline
+EXTRA_DIST = LICENSE.GPL LICENSE.POLICY LICENSE.NON-FREE ChangeLog.pre5.0
 
-EXTRA_DIST = LICENSE.GPL LICENSE.POLICY LICENSE.NON-FREE ChangeLog.pre5.0 reconf
-             
-install-data-local:
-	@$(NORMAL_INSTALL)
-	if test -d $(srcdir)/config; then \
-	  $(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/config; \
-	  for cfgfile in $(srcdir)/config/*; do \
-	    if test -f $$cfgfile; then \
-	      $(INSTALL_DATA) $$cfgfile $(DESTDIR)$(pkgdatadir)/config; \
-	    fi \
-	  done \
-	fi
+pkgconfig_DATA = acovea.pc
 
-	if test -d $(srcdir)/benchmarks; then \
-	  $(mkinstalldirs) $(DESTDIR)$(pkgdatadir)/benchmarks; \
-	  for benchfile in $(srcdir)/benchmarks/*; do \
-	    if test -f $$benchfile; then \
-	      $(INSTALL_DATA) $$benchfile $(DESTDIR)$(pkgdatadir)/benchmarks; \
-	    fi \
-	  done \
-	fi
+benchmarksdir = $(pkgdatadir)/benchmarks
+dist_benchmarks_DATA = \
+	benchmarks/almabench.c \
+	benchmarks/distbench.c \
+	benchmarks/evobench.c \
+	benchmarks/fftbench.c \
+	benchmarks/huffbench.c \
+	benchmarks/linbench.c \
+	benchmarks/linsmall.c \
+	benchmarks/mat1bench.c \
+	benchmarks/treebench.c
 
-uninstall-local:
-	if test -d $(DESTDIR)$(pkgdatadir); then \
-	  rm -rf $(DESTDIR)$(pkgdatadir); \
-	fi
+configdir = $(pkgdatadir)/config
+dist_config_DATA = \
+	config/g++34_opteron.acovea \
+	config/g++34_pentium3.acovea \
+	config/g++34_pentium4.acovea \
+	config/g++40_opteron.acovea \
+	config/g++40_pentium4.acovea \
+	config/g9540_opteron.acovea \
+	config/g9540_pentium3.acovea \
+	config/g9540_pentium4.acovea \
+	config/gcc34_intel.acovea \
+	config/gcc34_opteron.acovea \
+	config/gcc34_opteron_makefile.acovea \
+	config/gcc34_opteron_size.acovea \
+	config/gcc34_pentium3.acovea \
+	config/gcc34_pentium4.acovea \
+	config/gcc40_opteron.acovea \
+	config/gcc40_opteron_makefile.acovea \
+	config/gcc40_opteron_nofm.acovea \
+	config/gcc40_opteron_size.acovea \
+	config/gcc40_pentium4.acovea \
+	config/gcc41_opteron_nofm.acovea \
+	config/Makefile.example
 
-dist-hook:
-	if test -d config; then \
-	  mkdir $(distdir)/config; \
-	  for cfgfile in config/*; do \
-	    if test -f $$cfgfile; then \
-	      cp -p $$cfgfile $(distdir)/config; \
-	    fi \
-	  done \
-	fi
+###########
+# cmdline #
+###########
+AM_CPPFLAGS = \
+	-DACOVEA_VERSION=\"$(VERSION)\" \
+	-DACOVEA_CONFIG_DIR=\""$(pkgdatadir)/config/"\" \
+	-DACOVEA_BENCHMARK_DIR=\""$(pkgdatadir)/benchmarks/"\"
 
-	if test -d benchmarks; then \
-	  mkdir $(distdir)/benchmarks; \
-	  for benchfile in benchmarks/*; do \
-	    if test -f $$benchfile; then \
-	      cp -p $$benchfile $(distdir)/benchmarks; \
-	    fi \
-	  done \
-	fi
+bin_PROGRAMS = cmdline/runacovea
 
+cmdline_runacovea_SOURCES = cmdline/runacovea.cpp
+cmdline_runacovea_LDADD = libacovea/libacovea.la $(LIBCOYOTL_LIBS)
+
+#############
+# libacovea #
+#############
+
+pkginclude_HEADERS = libacovea/acovea.h
+
+lib_LTLIBRARIES = libacovea/libacovea.la
+
+libacovea_libacovea_la_SOURCES = $(pkginclude_HEADERS) libacovea/acovea.cpp
+libacovea_libacovea_la_LDFLAGS= -version-info $(GENERIC_LIBRARY_VERSION) -release $(GENERIC_RELEASE)
+libacovea_libacovea_la_LIBADD = $(EXPAT_LIBS) $(LIBEVOCOSM_LIBS)
