@@ -906,7 +906,7 @@ chromosome application::breed(const chromosome & a_parent1,
     if (a_parent1.size() != a_parent2.size())
     {
         char message[128];
-        snprintf(message,128,"incompatible option vectors in breeding (sizes %d and %d)",a_parent1.size(),a_parent2.size());
+        snprintf(message,128,"incompatible option vectors in breeding (sizes %lu and %lu)",a_parent1.size(),a_parent2.size());
         throw invalid_argument(message);
     }
     
