@@ -87,7 +87,7 @@ option & option::operator = (const option & a_source)
 // randomize settings of this option
 void option::randomize()
 {
-    m_enabled = (g_random.get_rand_real2() < 0.5);
+    m_enabled = (g_random.get_real() < 0.5);
 }
 
 // mutate this option
@@ -247,7 +247,7 @@ tuning_option::tuning_option(const string & a_name,
         m_step = 1;
     
     // possibly adjust value to randomize populations
-    size_t choice = g_random.get_rand_index(3);
+    size_t choice = g_random.get_index(3);
     
     switch (choice)
     {
@@ -305,12 +305,12 @@ string tuning_option::get() const
 void tuning_option::mutate()
 {
     // select our mutation
-    if (g_random.get_rand_real2() < 0.5)
+    if (g_random.get_real() < 0.5)
         option::mutate();
     else
     {
         // mutate value of this option, up or down randomly
-        if (g_random.get_rand_real2() < 0.5)
+        if (g_random.get_real() < 0.5)
             m_value -= m_step;
         else
             m_value += m_step;
@@ -336,7 +336,7 @@ option * tuning_option::clone()
 enum_option::enum_option(const vector<string> & a_choices, bool a_enabled)
   : option(a_enabled),
     m_choices(a_choices),
-    m_setting(g_random.get_rand_index(a_choices.size()))    
+    m_setting(g_random.get_index(a_choices.size()))
 {
     // nada
 }
@@ -345,7 +345,7 @@ enum_option::enum_option(const vector<string> & a_choices, bool a_enabled)
 enum_option::enum_option(const char ** a_choices, size_t a_num_choices, bool a_enabled)
   : option(a_enabled),
     m_choices(),
-    m_setting(g_random.get_rand_index(a_num_choices))    
+    m_setting(g_random.get_index(a_num_choices))
 {
     for (int n = 0; n < a_num_choices; ++n)
         m_choices.push_back(string(a_choices[n]));
@@ -370,7 +370,7 @@ enum_option::enum_option(const char * a_choices, bool a_enabled)
         token = strtok(NULL,"|");
     }
     
-    m_setting = g_random.get_rand_index(m_choices.size());
+    m_setting = g_random.get_index(m_choices.size());
     
     free(choices);
 }
@@ -408,17 +408,17 @@ string enum_option::get() const
 void enum_option::randomize()
 {
     // randomize enabled
-    m_enabled = (g_random.get_rand_real2() < 0.5);
+    m_enabled = (g_random.get_real() < 0.5);
     
     // randomize setting
-    m_setting = g_random.get_rand_index(m_choices.size());
+    m_setting = g_random.get_index(m_choices.size());
 }
 
 // mutate this option
 void enum_option::mutate()
 {
     // select our mutation
-    if (g_random.get_rand() & 1)
+    if (g_random.get_real() < 0.5)
         option::mutate();
     else
     {
@@ -436,7 +436,7 @@ void enum_option::mutate()
         
             // find a different setting
             while (new_setting == m_setting)
-                new_setting = g_random.get_rand_index(m_choices.size());
+                new_setting = g_random.get_index(m_choices.size());
             
             m_setting = new_setting;
         }
@@ -916,7 +916,7 @@ chromosome application::breed(const chromosome & a_parent1,
     // randomly pick an option from one of the parents
     for (int n = 0; n < a_parent1.size(); ++n)
     {
-        if (g_random.get_rand() & 1)
+        if (g_random.get_real() < 0.5)
             child.push_back(a_parent1[n]->clone());
         else
             child.push_back(a_parent2[n]->clone());
@@ -932,7 +932,7 @@ void application::mutate(chromosome & a_options,
 {
     for (int n = 0; n < a_options.size(); ++n)
     {
-        if (g_random.get_rand_real2() < a_mutation_chance)
+        if (g_random.get_real() < a_mutation_chance)
             a_options[n]->mutate();
     }
 }
@@ -1097,7 +1097,7 @@ vector<acovea_organism> acovea_reproducer::breed(const vector< acovea_organism >
             acovea_organism * child;
 
             // do we crossover?
-            if (g_random.get_rand_real2() <= m_crossover_rate)
+            if (g_random.get_real() <= m_crossover_rate)
             {
                 // select a second parent
                 size_t second_index = first_index;
